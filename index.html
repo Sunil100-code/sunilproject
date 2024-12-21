@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Wallet - Paytm Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>PayClone Wallet</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#add-money">Add Money</a>
+            <a href="#transfer-money">Transfer Money</a>
+            <a href="#history">Transaction History</a>
+        </nav>
+    </div>
+
+    <div class="wallet-balance">
+        <h2>Wallet Balance</h2>
+        <div class="balance">
+            ₹<span id="balance">5000.00</span>
+        </div>
+    </div>
+
+    <div class="container" id="add-money">
+        <h2>Add Money</h2>
+        <form>
+            <label for="add-amount">Enter Amount:</label>
+            <input type="number" id="add-amount" placeholder="Enter amount" required>
+            <button type="button" onclick="addMoney()">Add Money</button>
+        </form>
+    </div>
+
+    <div class="container" id="transfer-money">
+        <h2>Transfer Money</h2>
+        <form>
+            <label for="receiver">Receiver's Email/Phone:</label>
+            <input type="text" id="receiver" placeholder="Enter email/phone" required>
+            <label for="transfer-amount">Enter Amount:</label>
+            <input type="number" id="transfer-amount" placeholder="Enter amount" required>
+            <button type="button" onclick="transferMoney()">Transfer</button>
+        </form>
+    </div>
+
+    <div class="container" id="history">
+        <h2>Transaction History</h2>
+        <ul id="history-list">
+            <!-- Transaction history items will go here -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
